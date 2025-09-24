@@ -140,7 +140,7 @@ A non-government entity powered by Essential Property Solutions, a health insura
         <div class="text-[#19329a] italic text-[0.9em] font-semibold text-center mb-[5px]" id="handleHeading">Find Out Which Medicare Advantage Plan Fits Your Needs!<br>SEP [Newly eligible for Medicare, recently moved or lost coverage?]</div>
         <p style="text-align: center; font-size: 14px;">In order to see what additional benefits you may be eligible for, answer a few questions below and speak to a licensed insurance agent who can help you find plans that service your area.</p>
         <img src="images/image.png" class="mx-auto img-responsive wow flipInX animated  max-w-[250px] my-4" style="visibility: visible; animation-name: flipInX;" id="handleImg">
-        <div class="mt-[15px] text-center text-[1.6em] font-bold leading-[1.2] text-[#2a2a2b] mb-7" id="handleQuestion">Do you live in the U.S.</div>
+        <!-- <div class="mt-[15px] text-center text-[1.6em] font-bold leading-[1.2] text-[#2a2a2b] mb-7" id="handleQuestion">Do you live in the U.S.</div> -->
         <div class="flex items-center justify-center w-full">
         <video id="handleVid" class="hidden" src="images/test.mp4" loop="" autoplay="" muted="" playsinline="" style="width: 150px;"></video>
       </div>
@@ -320,7 +320,7 @@ insurance company.
 
 </div>
   <!-- <p>G2 Licensed Agent : Jessica Johanna Rodriguez</p> -->
-<script>
+<!-- <script>
 const handleYes = document.getElementById("handleYes");
 const handleNo = document.getElementById("handleNo");
 const handleImg = document.getElementById("handleImg");
@@ -402,6 +402,64 @@ handleSkip.addEventListener("click", ()=> {
     handleVid.style.display = 'block';
   }
 })
+</script> -->
+
+<script>
+  // ===== Keep other functionality same, but start flow at "Are you currently on Medicare parts A and B?" =====
+
+  const handleYes = document.getElementById("handleYes");
+  const handleNo = document.getElementById("handleNo");
+  const handleImg = document.getElementById("handleImg");
+  const handleQuestion = document.getElementById("handleQuestion");
+  const handleHeading = document.getElementById("handleHeading"); // first-screen heading
+  const handleCall = document.getElementById("handleCall");
+  const handleVid = document.getElementById("handleVid");
+  const handleSkip = document.getElementById("handleSkip");
+  const progressBar = document.querySelector('[data-chain--progress--component-target="barStatus"]');
+
+  // We no longer have the first question "Do you live in the U.S."
+  // Initialize the UI so the FIRST visible question is the Medicare A/B question.
+  (function initFlow() {
+    if (handleImg) handleImg.style.display = 'none'; // hide hero image used in the old first step
+    if (handleQuestion) handleQuestion.innerText = "Are you currently on Medicare parts A and B?";
+    if (handleSkip) handleSkip.style.display = "block"; // keep Skip available like before
+    if (progressBar) progressBar.style.width = '0%'; // start fresh
+  })();
+
+  // Single function to move to final step (keeps rest of functionality intact)
+  function goFinalStep() {
+    if (handleQuestion) {
+      handleQuestion.innerText = "Tap The Button Below To Chat With A Licensed Insurance Agent";
+    }
+
+    // Update the heading to the qualifying/congrats line
+    // (Matches your previous copy but fixes punctuation)
+    if (handleHeading) {
+      handleHeading.innerHTML = "Congratulations! You may be eligible for a Medicare Advantage Plan that may include Additional Benefits!";
+    }
+
+    // Hide interactive buttons (Yes/No/Skip), show Call + Lottie video
+    if (handleYes) handleYes.style.display = 'none';
+    if (handleNo) handleNo.style.display = 'none';
+    if (handleSkip) handleSkip.style.display = 'none';
+    if (handleCall) handleCall.style.display = 'block';
+    if (handleVid) handleVid.style.display = 'block';
+
+    // Jump progress straight to 100%, since we're at the final CTA
+    if (progressBar) progressBar.style.width = '100%';
+  }
+
+  // Events: whichever action user takes on this (now-first) question, we go to final step
+  if (handleYes) {
+    handleYes.addEventListener("click", goFinalStep);
+  }
+  if (handleNo) {
+    handleNo.addEventListener("click", goFinalStep);
+  }
+  if (handleSkip) {
+    handleSkip.addEventListener("click", goFinalStep);
+  }
 </script>
+
 </footer>
 </body></html>
