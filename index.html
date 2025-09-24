@@ -136,99 +136,84 @@ A non-government entity powered by Essential Property Solutions, a health insura
   <div id="izxxy-2" class="main-chain mx-auto w-full">
     <div data-chain--component-target="questionsWrapper" id="ittgy-2" class="questions-wrapper prepopulated-area progressbar-template translate-x-0 transform whitespace-nowrap text-center transition-all duration-500 ease-in-out">
     
-      <div class="lander-item relative inline-block h-auto w-screen max-w-full translate-y-4 transform-none whitespace-normal align-top transition duration-200 ease-in" data-chain--component-target="question">
-        <div class="text-[#19329a] italic text-[0.9em] font-semibold text-center mb-[5px]" id="handleHeading">Find Out Which Medicare Advantage Plan Fits Your Needs!<br>SEP [Newly eligible for Medicare, recently moved or lost coverage?]</div>
-        <p style="text-align: center; font-size: 14px;">In order to see what additional benefits you may be eligible for, answer a few questions below and speak to a licensed insurance agent who can help you find plans that service your area.</p>
-        <img src="images/image.png" class="mx-auto img-responsive wow flipInX animated  max-w-[250px] my-4" style="visibility: visible; animation-name: flipInX;" id="handleImg">
-        <div class="mt-[15px] text-center text-[1.6em] font-bold leading-[1.2] text-[#2a2a2b] mb-7" id="handleQuestion">Do you live in the U.S.</div>
-        <div class="flex items-center justify-center w-full">
-        <video id="handleVid" class="hidden" src="images/test.mp4" loop="" autoplay="" muted="" playsinline="" style="width: 150px;"></video>
-      </div>
-        <div class="flex flex-col w-full space-y-2.5 mx-auto max-w-sm mt-6" id="handleBtn">
-          <button class="relative block bg-white text-[#0b3954] rounded-sm py-5 px-3.5 border border-[#0B3954] cursor-pointer shadow-md text-lg font-semibold" id="handleYes">
-            Yes
-            <svg xmlns="http://www.w3.org/2000/svg" class="hidden selected-icon h-6 w-6 absolute right-4 top-1/2 transform -translate-y-1/2 text-[#0b3954]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="white"></circle>
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"></path>
-            </svg>
-          </button>
-          
-          <button data-action="click->chain--answer--button--component#handleAnswer" class="relative block bg-white text-[#0b3954] rounded-sm py-5 px-3.5 border border-[#0B3954] cursor-pointer shadow-md text-lg font-semibold" id="handleNo">
-            No
-            <svg xmlns="http://www.w3.org/2000/svg" class="hidden selected-icon h-6 w-6 absolute right-4 top-1/2 transform -translate-y-1/2 text-[#0b3954]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="white"></circle>
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"></path>
-            </svg>
-          </button>
-          <button data-action="click->chain--answer--button--component#handleAnswer" class="relative block bg-white text-[#0b3954] rounded-sm py-5 px-3.5 border border-[#0B3954] cursor-pointer shadow-md text-lg font-semibold" id="handleSkip">
-            Skip
-            <svg xmlns="http://www.w3.org/2000/svg" class="hidden selected-icon h-6 w-6 absolute right-4 top-1/2 transform -translate-y-1/2 text-[#0b3954]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="white"></circle>
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"></path>
-            </svg>
-          </button>
-          <button data-action="click->chain--answer--button--component#handleAnswer" class="relative block bg-white text-[#0b3954] rounded-sm py-5 px-3.5 border border-[#0B3954] cursor-pointer shadow-md text-lg font-semibold hidden" id="handleCall">
-            <a href="tel:123-456-7890">CALL NOW | TTY 711 (TOLL-FREE)</a>
-            <p style="font-size: 18px; color: #000;">
-  Monday to Friday 8AM to 9PM EST
+<div class="lander-item relative inline-block h-auto w-screen max-w-full translate-y-4 transform-none whitespace-normal align-top transition duration-200 ease-in" data-chain--component-target="question">
+  <div class="text-[#19329a] italic text-[0.9em] font-semibold text-center mb-[5px]" id="handleHeading">
+    Find Out Which Medicare Advantage Plan Fits Your Needs!<br>
+    SEP [Newly eligible for Medicare, recently moved or lost coverage?]
+  </div>
 
-</p>
-            <svg xmlns="http://www.w3.org/2000/svg" class="hidden selected-icon h-6 w-6 absolute right-4 top-1/2 transform -translate-y-1/2 text-[#0b3954]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="white"></circle>
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"></path>
-            </svg>
-          </button>
-          
-        </div>
-        <div class="text-center mt-8">
-          <p class="text-[0.6em] mx-auto"></p>
-        </div>
-        <div class="flex flex-row justify-center mt-[70px] max-w-[375px] mx-auto hidden">
-          <div class="inline-block flex-none w-[55px] h-[55px] bg-[url('./assets/agent3.jpeg')] bg-cover bg-no-repeat rounded-full mb-[130px] mr-4"></div>
-          <div class="bg-[#f7f7f7] self-start inline-block w-[314px] mb-[120px] p-[14px_12px] rounded-[3px] rounded-tl-none text-left">
-            <p class="font-semibold mt-[9px] mb-0 text-[.75em] leading-[1.4] text-black">What happens next?</p>
-            <ul class="list-disc mt-0 mb-[1rem] pl-8">
-              <li class="text-[.75em] pt-[4px] font-normal text-black">Your information will be encrypted using 256 SSL technology.</li>
-              <li class="text-[.75em] pt-[4px] font-normal text-black">You'll be matched with a relief specialist who will call you to discuss the best options to get to a better financial situation.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    
-      <div class="lander-item relative inline-block h-auto w-screen max-w-full translate-y-4 transform-none whitespace-normal align-top transition duration-200 ease-in hidden flex flex-col" data-chain--component-target="question">
-        <div class="text-[#19329a] italic text-[0.9em] font-semibold text-center mb-[5px]">Medicicare Recipients Could Qualify for Additional Medicare Benefits</div>
-        <div class="mt-[15px] text-center text-[1.6em] font-bold leading-[1.2] text-[#2a2a2b] mb-7">Are you currently on Medicare parts A and B?</div>
-        <div class="flex flex-col w-full space-y-2.5 mx-auto max-w-sm mt-6">
-          <button data-value="Yes" data-action="click->chain--answer--button--component#handleAnswer" class="relative block bg-white text-[#0b3954] rounded-sm py-5 px-3.5 border border-[#0B3954] cursor-pointer shadow-md text-lg font-semibold">
-            Yes
-            <svg xmlns="http://www.w3.org/2000/svg" class="hidden selected-icon h-6 w-6 absolute right-4 top-1/2 transform -translate-y-1/2 text-[#0b3954]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="white"></circle>
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"></path>
-            </svg>
-          </button>
-          <button data-value="No" data-action="click->chain--answer--button--component#handleAnswer" class="relative block bg-white text-[#0b3954] rounded-sm py-5 px-3.5 border border-[#0B3954] cursor-pointer shadow-md text-lg font-semibold">
-            No
-            <svg xmlns="http://www.w3.org/2000/svg" class="hidden selected-icon h-6 w-6 absolute right-4 top-1/2 transform -translate-y-1/2 text-[#0b3954]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="white"></circle>
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"></path>
-            </svg>
-          </button>
-          
-        </div>
-        <div class="text-center mt-8">
-          <p class="text-[0.6em] mx-auto"></p>
-        </div>
-        <div class="flex flex-row justify-center mt-[70px] max-w-[375px] mx-auto hidden">
-          <div class="inline-block flex-none w-[55px] h-[55px] bg-[url('./assets/agent3.jpeg')] bg-cover bg-no-repeat rounded-full mb-[130px] mr-4"></div>
-          <div class="bg-[#f7f7f7] self-start inline-block w-[314px] mb-[120px] p-[14px_12px] rounded-[3px] rounded-tl-none text-left">
-            <p class="font-semibold mt-[9px] mb-0 text-[.75em] leading-[1.4] text-black">What happens next?</p>
-            <ul class="list-disc mt-0 mb-[1rem] pl-8">
-              <li class="text-[.75em] pt-[4px] font-normal text-black">Your information will be encrypted using 256 SSL technology.</li>
-              <li class="text-[.75em] pt-[4px] font-normal text-black">You'll be matched with a relief specialist who will call you to discuss the best options to get to a better financial situation.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+  <p style="text-align: center; font-size: 14px;">
+    In order to see what additional benefits you may be eligible for, answer a few questions below and speak to a licensed insurance agent who can help you find plans that service your area.
+  </p>
+
+  <!-- single image only (hidden) -->
+  <img
+    src="images/image.png"
+    class="mx-auto img-responsive wow flipInX animated max-w-[250px] my-4"
+    style="visibility: visible; animation-name: flipInX; display: none;"
+    id="handleImg"
+  >
+
+  <!-- start on Q2 -->
+  <div class="mt-[15px] text-center text-[1.6em] font-bold leading-[1.2] text-[#2a2a2b] mb-7" id="handleQuestion">
+    Are you currently on Medicare parts A and B?
+  </div>
+
+  <div class="flex items-center justify-center w-full">
+    <video id="handleVid" class="hidden" src="images/test.mp4" loop autoplay muted playsinline style="width: 150px;"></video>
+  </div>
+
+  <div class="flex flex-col w-full space-y-2.5 mx-auto max-w-sm mt-6" id="handleBtn">
+    <button class="relative block bg-white text-[#0b3954] rounded-sm py-5 px-3.5 border border-[#0B3954] cursor-pointer shadow-md text-lg font-semibold" id="handleYes">
+      Yes
+      <svg xmlns="http://www.w3.org/2000/svg" class="hidden selected-icon h-6 w-6 absolute right-4 top-1/2 transform -translate-y-1/2 text-[#0b3954]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="white"></circle>
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"></path>
+      </svg>
+    </button>
+
+    <button class="relative block bg-white text-[#0b3954] rounded-sm py-5 px-3.5 border border-[#0B3954] cursor-pointer shadow-md text-lg font-semibold" id="handleNo">
+      No
+      <svg xmlns="http://www.w3.org/2000/svg" class="hidden selected-icon h-6 w-6 absolute right-4 top-1/2 transform -translate-y-1/2 text-[#0b3954]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="white"></circle>
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"></path>
+      </svg>
+    </button>
+
+    <button class="relative block bg-white text-[#0b3954] rounded-sm py-5 px-3.5 border border-[#0B3954] cursor-pointer shadow-md text-lg font-semibold" id="handleSkip">
+      Skip
+      <svg xmlns="http://www.w3.org/2000/svg" class="hidden selected-icon h-6 w-6 absolute right-4 top-1/2 transform -translate-y-1/2 text-[#0b3954]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="white"></circle>
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"></path>
+      </svg>
+    </button>
+
+    <button class="relative block bg-white text-[#0b3954] rounded-sm py-5 px-3.5 border border-[#0B3954] cursor-pointer shadow-md text-lg font-semibold hidden" id="handleCall">
+      <a href="tel:123-456-7890">CALL NOW | TTY 711 (TOLL-FREE)</a>
+      <p style="font-size: 18px; color: #000;">Monday to Friday 8AM to 9PM EST</p>
+      <svg xmlns="http://www.w3.org/2000/svg" class="hidden selected-icon h-6 w-6 absolute right-4 top-1/2 transform -translate-y-1/2 text-[#0b3954]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="white"></circle>
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div class="text-center mt-8">
+    <p class="text-[0.6em] mx-auto"></p>
+  </div>
+
+  <div class="flex flex-row justify-center mt-[70px] max-w-[375px] mx-auto hidden">
+    <div class="inline-block flex-none w-[55px] h-[55px] bg-[url('./assets/agent3.jpeg')] bg-cover bg-no-repeat rounded-full mb-[130px] mr-4"></div>
+    <div class="bg-[#f7f7f7] self-start inline-block w-[314px] mb-[120px] p-[14px_12px] rounded-[3px] rounded-tl-none text-left">
+      <p class="font-semibold mt-[9px] mb-0 text-[.75em] leading-[1.4] text-black">What happens next?</p>
+      <ul class="list-disc mt-0 mb-[1rem] pl-8">
+        <li class="text-[.75em] pt-[4px] font-normal text-black">Your information will be encrypted using 256 SSL technology.</li>
+        <li class="text-[.75em] pt-[4px] font-normal text-black">You'll be matched with a relief specialist who will call you to discuss the best options to get to a better financial situation.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
     
       
     
@@ -321,87 +306,66 @@ insurance company.
 </div>
   <!-- <p>G2 Licensed Agent : Jessica Johanna Rodriguez</p> -->
 <script>
-const handleYes = document.getElementById("handleYes");
-const handleNo = document.getElementById("handleNo");
-const handleImg = document.getElementById("handleImg");
-const handleQuestion = document.getElementById("handleQuestion");
-const handleHeading = document.getElementById("handleHeading");
-const handleCall = document.getElementById("handleCall");
-const handleVid = document.getElementById("handleVid");
-const handleSkip = document.getElementById("handleSkip");
-const progressBar = document.querySelector('[data-chain--progress--component-target="barStatus"]');
-let count = 0;
-let progress = 0;
+  const handleYes = document.getElementById("handleYes");
+  const handleNo = document.getElementById("handleNo");
+  const handleImg = document.getElementById("handleImg");
+  const handleQuestion = document.getElementById("handleQuestion");
+  const handleHeading = document.getElementById("handleHeading");
+  const handleCall = document.getElementById("handleCall");
+  const handleVid = document.getElementById("handleVid");
+  const handleSkip = document.getElementById("handleSkip");
+  const progressBar = document.querySelector('[data-chain--progress--component-target="barStatus"]');
 
-handleYes.addEventListener("click", ()=> {
+  // start "as if" first question was already answered
+  let count = 1;      // <-- key change (skip Q1)
+  let progress = 33;  // <-- show first-step progress
+
+  // reflect initial progress + show Skip
+  progressBar.style.width = progress + '%';
+  if (handleSkip) handleSkip.style.display = "block";
+
+  // make sure hero image is hidden (also hidden in HTML to avoid flash)
+  if (handleImg) handleImg.style.display = 'none';
+
+  // ensure the second question text is set (also set in HTML)
+  if (handleQuestion) {
+    handleQuestion.innerText = "Are you currently on Medicare parts A and B?";
+  }
+
+  function goFinal() {
+    handleQuestion.innerText = "Tap The Button Below To Chat With A Licensed Insurance Agent";
+    handleHeading.innerHTML = "Congratulations You May be eligible for a Medicare Advantage Plan that may include Additional Benefits!";
+    handleYes.style.display = 'none';
+    handleNo.style.display = 'none';
+    handleCall.style.display = 'block';
+    handleVid.style.display = 'block';
+  }
+
+  function handleAdvanceClick() {
+    // progress behavior (unchanged)
     if (progress === 33) {
       handleSkip.style.display = "none";
       progress = 66;
-    }
-    if (progress === 0) {
+    } else if (progress === 0) {
       progress = 33;
       handleSkip.style.display = "block";
     }
     progressBar.style.width = progress + '%';
-  if(count === 0){
-    handleImg.style.display = 'none';
-    handleQuestion.innerText = "Are you currently on Medicare parts A and B?";
-    count++
-  }else{
-    handleQuestion.innerText = "Tap The Button Below To Chat With A Licensed Insurance Agent";
-    handleHeading.innerHTML = "Congratulations You May be eligible for a Medicare Advantage Plan that may include Additional Benefits!";
-    handleYes.style.display = 'none'
-    handleNo.style.display = 'none'
-    handleCall.style.display = 'block';
-    handleVid.style.display = 'block';
+
+    // since count starts at 1, first click now goes to final step
+    if (count === 0) {
+      handleImg.style.display = 'none';
+      handleQuestion.innerText = "Are you currently on Medicare parts A and B?";
+      count++;
+    } else {
+      goFinal();
+    }
   }
-})
-handleNo.addEventListener("click", ()=> {
-  if (progress === 33) {
-    handleSkip.style.display = "none";
-      progress = 66;
-    }
-    if (progress === 0) {
-      handleSkip.style.display = "block";
-      progress = 33;
-    }
-    progressBar.style.width = progress + '%';
-  if(count === 0){
-    handleImg.style.display = 'none';
-    handleQuestion.innerText = "Are you currently on Medicare parts A and B?";
-    count++;
-  }else{
-    handleQuestion.innerText = "Tap The Button Below To Chat With A Licensed Insurance Agent";
-    handleHeading.innerHTML = "Congratulations You May be eligible for a Medicare Advantage Plan that may include Additional Benefits!";
-    handleYes.style.display = 'none'
-    handleNo.style.display = 'none'
-    handleCall.style.display = 'block';
-    handleVid.style.display = 'block';
-  }
-})
-handleSkip.addEventListener("click", ()=> {
-  if (progress === 33) {
-    handleSkip.style.display = "none";
-      progress = 66;
-    }
-    if (progress === 0) {
-      handleSkip.style.display = "block";
-      progress = 33;
-    }
-    progressBar.style.width = progress + '%';
-  if(count === 0){
-    handleImg.style.display = 'none';
-    handleQuestion.innerText = "Are you currently on Medicare parts A and B?";
-    count++;
-  }else{
-    handleQuestion.innerText = "Tap The Button Below To Chat With A Licensed Insurance Agent";
-    handleHeading.innerHTML = "Congratulations You May be eligible for a Medicare Advantage Plan that may include Additional Benefits!";
-    handleYes.style.display = 'none'
-    handleNo.style.display = 'none'
-    handleCall.style.display = 'block';
-    handleVid.style.display = 'block';
-  }
-})
+
+  handleYes.addEventListener("click", handleAdvanceClick);
+  handleNo.addEventListener("click", handleAdvanceClick);
+  handleSkip.addEventListener("click", handleAdvanceClick);
 </script>
+
 </footer>
 </body></html>
