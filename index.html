@@ -320,7 +320,7 @@ insurance company.
 
 </div>
   <!-- <p>G2 Licensed Agent : Jessica Johanna Rodriguez</p> -->
-<script>
+<!-- <script>
 const handleYes = document.getElementById("handleYes");
 const handleNo = document.getElementById("handleNo");
 const handleImg = document.getElementById("handleImg");
@@ -402,6 +402,69 @@ handleSkip.addEventListener("click", ()=> {
     handleVid.style.display = 'block';
   }
 })
+</script> -->
+
+<script>
+  const handleYes = document.getElementById("handleYes");
+  const handleNo = document.getElementById("handleNo");
+  const handleImg = document.getElementById("handleImg");
+  const handleQuestion = document.getElementById("handleQuestion");
+  const handleHeading = document.getElementById("handleHeading");
+  const handleCall = document.getElementById("handleCall");
+  const handleVid = document.getElementById("handleVid");
+  const handleSkip = document.getElementById("handleSkip");
+  const progressBar = document.querySelector('[data-chain--progress--component-target="barStatus"]');
+
+  // start "as if" first question was already answered
+  let count = 1;      // <-- key change (skip Q1)
+  let progress = 33;  // <-- show first-step progress
+
+  // reflect initial progress + show Skip
+  progressBar.style.width = progress + '%';
+  if (handleSkip) handleSkip.style.display = "block";
+
+  // make sure hero image is hidden (also hidden in HTML to avoid flash)
+  if (handleImg) handleImg.style.display = 'none';
+
+  // ensure the second question text is set (also set in HTML)
+  if (handleQuestion) {
+    handleQuestion.innerText = "Are you currently on Medicare parts A and B?";
+  }
+
+  function goFinal() {
+    handleQuestion.innerText = "Tap The Button Below To Chat With A Licensed Insurance Agent";
+    handleHeading.innerHTML = "Congratulations You May be eligible for a Medicare Advantage Plan that may include Additional Benefits!";
+    handleYes.style.display = 'none';
+    handleNo.style.display = 'none';
+    handleCall.style.display = 'block';
+    handleVid.style.display = 'block';
+  }
+
+  function handleAdvanceClick() {
+    // progress behavior (unchanged)
+    if (progress === 33) {
+      handleSkip.style.display = "none";
+      progress = 66;
+    } else if (progress === 0) {
+      progress = 33;
+      handleSkip.style.display = "block";
+    }
+    progressBar.style.width = progress + '%';
+
+    // since count starts at 1, first click now goes to final step
+    if (count === 0) {
+      handleImg.style.display = 'none';
+      handleQuestion.innerText = "Are you currently on Medicare parts A and B?";
+      count++;
+    } else {
+      goFinal();
+    }
+  }
+
+  handleYes.addEventListener("click", handleAdvanceClick);
+  handleNo.addEventListener("click", handleAdvanceClick);
+  handleSkip.addEventListener("click", handleAdvanceClick);
 </script>
+
 </footer>
 </body></html>
